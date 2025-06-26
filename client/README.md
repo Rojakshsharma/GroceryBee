@@ -1,34 +1,30 @@
-# Grocery Bee 🛒
+# Grocery Bee – Frontend 🛒
 
-<p align="center">
-  <img src="client/public/favicon.png" alt="Grocery Bee Logo" width="200"/>
-</p>
-
-Grocery Bee is a full-stack e-commerce web application designed for an online grocery store. It enables users to browse, search, and purchase grocery items seamlessly, with a modern and responsive user interface.
-
-This project is built using the **MERN Stack**:
-
-- **MongoDB** for database
-- **Express.js** as the backend framework
-- **React.js + Vite** for the frontend
-- **Node.js** for the server runtime
+**Grocery Bee** is a full-stack e-commerce grocery store application built using the MERN stack.  
+This directory (`/client`) contains the **frontend** of the application — a fast, modern, and responsive user interface built with **React** and **Vite**.
 
 ---
 
-## 📦 Tech Stack
+## ✨ Features
 
-- **Frontend:** React (with Vite), TailwindCSS (or CSS framework of your choice)
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB
-- **Linting:** ESLint
-- **Version Control:** Git + GitHub
+- ⚡ Blazing fast development with Vite
+- 🧭 Routing using React Router
+- 🛒 Dynamic shopping cart
+- 🔍 Product filtering and search
+- 📦 Integration with backend API for product data
+- 🎨 Styled with Tailwind CSS or your preferred styling method
+- 📱 Fully responsive design
 
 ---
 
-## 🚀 Getting Started
+## 🧰 Tech Stack
 
-### 1. Clone the repository
+- **React.js** – Frontend UI library
+- **Vite** – Fast build and dev server
+- **React Router DOM** – For page navigation
+- **Axios** – For communicating with the backend API
+- **Tailwind CSS** – Utility-first CSS framework (optional but recommended)
+- **ESLint** – Code linting
+- **Git** – Version control
 
-```bash
-git clone git@github.com:your-username/GroceryBee.git
-cd GroceryBee
+---
