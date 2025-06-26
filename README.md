@@ -1,7 +1,7 @@
 # Grocery Bee 🛒
 
 <p align="center">
-  <img src="client/public/logo.png" alt="Grocery Bee Logo" width="200"/>
+  <img src="client/public/logo.svg" alt="Grocery Bee Logo" width="200"/>
 </p>
 
 Grocery Bee is a full-stack e-commerce web application designed for an online grocery store. It enables users to browse, search, and purchase grocery items seamlessly, with a modern and responsive user interface.
@@ -32,3 +32,4 @@ This project is built using the **MERN Stack**:
 ```bash
 git clone git@github.com:your-username/GroceryBee.git
 cd GroceryBee
+```
