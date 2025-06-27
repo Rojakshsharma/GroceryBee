@@ -15,7 +15,11 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
       <NavLink to={"/"} onClick={() => setOpen(false)}>
-        <img className="h-16 w-auto rounded-full object-contain" src={assets.logo} alt="logo" />
+        <img
+          className="h-16 w-auto rounded-full object-contain"
+          src={assets.logo}
+          alt="logo"
+        />
       </NavLink>
 
       {/* Desktop Menu */}
@@ -45,7 +49,7 @@ const Navbar = () => {
             className="w-6 opacity-80"
             alt="cart"
           />
-          <button className="absolute -top-2 -right-3 text-xs text-black bg-primary w-[18px] h-[18px] rounded-full">
+          <button className="absolute -top-2 -right-3 text-xs text-gray-600 bg-primary w-[18px] h-[18px] rounded-full">
             3
           </button>
         </div>
@@ -53,7 +57,7 @@ const Navbar = () => {
         {!user ? (
           <button
             onClick={() => setShowUserLogin(true)}
-            className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-black rounded-full"
+            className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-gray-600 rounded-full"
           >
             Login
           </button>
