@@ -3,17 +3,21 @@ import { useAppContext } from "../context/AppContext";
 import { assets } from "../assets/assets";
 
 const ProductCard = ({ product }) => {
-  const [count, setCount] = useState(0);
   const { currency, addToCart, removeFromCart, cartItems, navigate } =
     useAppContext();
 
   return (
     product && (
-      <div className="border border-gray-500/20 rounded-lg p-3 bg-white w-full max-w-64 mx-auto">
-        <div
-          className="group cursor-pointer flex items-center justify-center"
-          onClick={() => navigate(`/product/${product._id}`)}
-        >
+      <div
+        onClick={() => {
+          navigate(
+            `/products/${product.category.toLowerCase()}/${product._id}`
+          );
+          scrollTo(0, 0);
+        }}
+        className="border border-gray-500/20 rounded-lg p-3 bg-white w-full max-w-64 mx-auto"
+      >
+        <div className="group cursor-pointer flex items-center justify-center">
           <img
             className="group-hover:scale-105 transition-all duration-300 w-full max-w-[120px] sm:max-w-[150px]"
             src={product.image[0]}
@@ -45,10 +49,7 @@ const ProductCard = ({ product }) => {
                 {currency}${product.price}
               </span>
             </p>
-            <div
-              onClick={(e) => e.stopPropagation()}
-              className="text-primary"
-            >
+            <div onClick={(e) => e.stopPropagation()} className="text-primary">
               {!cartItems[product._id] ? (
                 <button
                   className="flex items-center justify-center gap-1 bg-yellow-100 border border-primary w-16 sm:w-20 h-8 sm:h-9 rounded text-gray-600 text-sm sm:text-base font-medium"
@@ -65,8 +66,8 @@ const ProductCard = ({ product }) => {
                     <path
                       d="M.583.583h2.333l1.564 7.81a1.17 1.17 0 0 0 1.166.94h5.67a1.17 1.17 0 0 0 1.167-.94l.933-4.893H3.5m2.333 8.75a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0m6.417 0a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0"
                       stroke="#DAA520"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                   Add
