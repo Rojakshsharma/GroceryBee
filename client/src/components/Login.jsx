@@ -39,7 +39,7 @@ const Login = () => {
               onChange={(e) => setName(e.target.value)}
               value={name}
               placeholder="type here"
-              className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary"
+              className="border border-gray-200 rounded w-full p-2 mt-1 focus:border-primary"
               type="text"
               required
             />
@@ -51,7 +51,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="type here"
-            className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary"
+            className="border border-gray-200 rounded w-full p-2 mt-1 focus:border-primary"
             type="email"
             required
           />
@@ -62,7 +62,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             placeholder="type here"
-            className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary"
+            className="border border-gray-200 rounded w-full p-2 mt-1 focus:border-primary"
             type="password"
             required
           />
@@ -88,7 +88,7 @@ const Login = () => {
             </span>
           </p>
         )}
-        <button className="bg-primary hover:bg-primary-dull transition-all text-white w-full py-2 rounded-md cursor-pointer">
+        <button className="bg-primary hover:bg-primary-dull transition-all text-gray-600 w-full py-2 rounded-md cursor-pointer">
           {state === "register" ? "Create Account" : "Login"}
         </button>
       </form>
