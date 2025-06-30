@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
-  const currency = import.meta.VITE_CURRENCY;
+  const currency = import.meta.env.VITE_CURRENCY;
 
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
@@ -67,9 +67,8 @@ export const AppContextProvider = ({ children }) => {
   const getCartAmount = () => {
     let totalAmount = 0;
     for (const items in cartItems) {
-      let itemInfo = products
-      .find((product) => product._id === items);
-      if(cartItems[items] > 0){
+      let itemInfo = products.find((product) => product._id === items);
+      if (cartItems[items] > 0) {
         totalAmount += itemInfo.offerPrice * cartItems[items];
       }
     }
@@ -99,7 +98,7 @@ export const AppContextProvider = ({ children }) => {
       searchQuery,
       setSearchQuery,
       getCartCount,
-      getCartAmount
+      getCartAmount,
     }),
     [
       navigate,
@@ -114,7 +113,7 @@ export const AppContextProvider = ({ children }) => {
       cartItems,
       searchQuery,
       getCartCount,
-      getCartAmount
+      getCartAmount,
     ]
   );
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
