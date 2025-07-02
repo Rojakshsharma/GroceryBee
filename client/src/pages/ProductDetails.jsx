@@ -37,7 +37,7 @@ const ProductDetails = () => {
             {" "}
             {product.category}
           </Link>{" "}
-          /<span className="text-primary"> {product.name}</span>
+          /<span className="text-gray-500">{product.name}</span>
         </p>
 
         <div className="flex flex-col md:flex-row gap-16 mt-4">
@@ -126,10 +126,13 @@ const ProductDetails = () => {
                 <ProductCard key={index} product={product} />
               ))}
           </div>
-          <button onClick={() => {
-            navigate(`/products`)
-            window.scrollTo(0, 0);
-            }} className="mx-auto cursor-pointer px-12 my-16 py-2.5 border rounded-full text-primary/100 hover:bg-primary/10 transition">
+          <button
+            onClick={() => {
+              navigate(`/products`);
+              window.scrollTo(0, 0);
+            }}
+            className="mx-auto cursor-pointer px-12 my-16 py-2.5 border rounded-full text-gray-600 border-primary hover:bg-primary/10 transition"
+          >
             See more ...
           </button>
         </div>
