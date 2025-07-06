@@ -1,5 +1,5 @@
 import { v2 as cloudinary } from "cloudinary";
-import Product from "../models/Product";
+import Product from "../models/Product.js";
 
 // Add Product : /api/product/add
 export const addProduct = async (req, res) => {
@@ -62,7 +62,7 @@ export const getProductById = async (req, res) => {
 };
 
 // Change Product in Stock : /api/product/stock
-export const changeStock = async (req, res) => {
+export const updateStock = async (req, res) => {
   try {
     const { id, inStock } = req.body;
     await Product.findByIdAndUpdate(id, { inStock });
