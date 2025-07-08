@@ -1,14 +1,12 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { dummyProducts } from "../assets/assets";
-import toast from "react-hot-toast";
 import axios from "axios";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
 
 export const AppContext = createContext();
-
 export const AppContextProvider = ({ children }) => {
   const currency = import.meta.env.VITE_CURRENCY;
 
@@ -31,6 +29,21 @@ export const AppContextProvider = ({ children }) => {
       }
     } catch (error) {
       setIsSeller(false);
+      console.error(error);
+    }
+  };
+
+  // Fetch user auth status , user data and cart items
+  const fetchUser = async () => {
+    try {
+      const { data } = await axios.get("/api/user/is-auth");
+      if (data.success) {
+        setUser(data.user);
+        setCartItems(data.user.cartItems);
+      }
+    } catch (error) {
+      setUser(null);
+      console.error(error);
     }
   };
 
@@ -103,9 +116,28 @@ export const AppContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    fetchUser();
     fetchSeller();
     fetchProducts();
   }, []);
+
+
+  // Update Database cart items
+  useEffect(() => {
+   const updateCart = async () => {
+      try {
+        const { data } = await axios.post("/api/cart/update", { cartItems });
+        if (!data.success) {
+          toast.error(data.message);
+        }
+      } catch (error) {
+        toast.error(error.message);
+      }
+    }
+    if (user) {
+      updateCart();
+    }
+  }, [cartItems]);
 
   const value = useMemo(
     () => ({

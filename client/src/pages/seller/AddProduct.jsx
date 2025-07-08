@@ -1,7 +1,7 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { assets, categories } from "../../assets/assets";
 import { useAppContext } from "../../context/AppContext";
-import toast from "react-hot-toast";
 
 const AddProduct = () => {
   const [files, setFiles] = useState([]);
@@ -19,7 +19,7 @@ const AddProduct = () => {
       e.preventDefault();
       const productData = {
         name,
-        description: description.split("\n"),
+        description: description.split('\n'),
         category,
         price,
         offerPrice,
