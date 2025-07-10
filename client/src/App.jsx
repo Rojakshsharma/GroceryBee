@@ -1,7 +1,8 @@
 import { Toaster } from "react-hot-toast";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
-import Loading from "./components/loading";
+
+import Loader from "./components/Loader";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import SellerLogin from "./components/seller/SellerLogin";
@@ -17,6 +18,7 @@ import AddProduct from "./pages/seller/AddProduct";
 import Orders from "./pages/seller/Orders";
 import ProductList from "./pages/seller/ProductList";
 import SellerLayout from "./pages/seller/SellerLayout";
+
 const App = () => {
   const isSellerpath = useLocation().pathname.includes("/seller");
   const { showUserLogin, isSeller } = useAppContext();
@@ -36,7 +38,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/add-address" element={<AddAddress />} />
           <Route path="/my-orders" element={<MyOrders />} />
-          <Route path="/loader" element={<Loading />} />
+          <Route path="/loader" element={<Loader />} />
           <Route
             path="/seller"
             element={isSeller ? <SellerLayout /> : <SellerLogin />}
