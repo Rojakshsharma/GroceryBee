@@ -6,7 +6,6 @@ import { useAppContext } from "../../context/AppContext";
 const AddProduct = () => {
   const [files, setFiles] = useState([]);
   const [name, setName] = useState("");
-  const [product, setProduct] = useState({});
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState(0);
@@ -19,7 +18,7 @@ const AddProduct = () => {
       e.preventDefault();
       const productData = {
         name,
-        description: description.split('\n'),
+        description: description.split("\n"),
         category,
         price,
         offerPrice,
