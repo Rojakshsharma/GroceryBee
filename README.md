@@ -1,35 +1,79 @@
 # Grocery Bee 🛒
 
 <p align="center">
-  <img src="client/public/logo.svg" alt="Grocery Bee Logo" width="200"/>
+  <img src="client/public/logo.svg" alt="Grocery Bee Logo" width="150"/>
 </p>
 
-Grocery Bee is a full-stack e-commerce web application designed for an online grocery store. It enables users to browse, search, and purchase grocery items seamlessly, with a modern and responsive user interface.
+Grocery Bee is a full-stack e-commerce web app for an online grocery store, built with the **MERN stack**. Users can browse, search, and buy groceries through a responsive interface.
 
-This project is built using the **MERN Stack**:
+🔗 **Live App**: [https://grocerybee-frontend.vercel.app/](https://grocerybee-frontend.vercel.app/)
 
-- **MongoDB** for database
-- **Express.js** as the backend framework
-- **React.js + Vite** for the frontend
-- **Node.js** for the server runtime
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+
+---
+
+## 📸 Screenshots
+![Homepage](./docs/screenshots/Dashboard.png)
+![Cart](./docs/screenshots/cart.png)
 
 ---
 
 ## 📦 Tech Stack
-
-- **Frontend:** React (with Vite), TailwindCSS (or CSS framework of your choice)
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB
-- **Linting:** ESLint
-- **Version Control:** Git + GitHub
+- **Frontend**: React.js, Vite, TailwindCSS, Axios, React Router DOM, React Hot Toast
+- **Backend**: Node.js, Express.js, MongoDB (Mongoose), Cloudinary, Stripe, JWT, Bcrypt.js, Multer
+- **Tools**: Git, ESLint, dotenv
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+See the [Setup Guide](./docs/setup-guide.md) for installation and development instructions.
 
-```bash
-git clone git@github.com:your-username/GroceryBee.git
-cd GroceryBee
-```
+---
+
+## 🌟 Features
+- Browse and search groceries
+- Manage cart and checkout
+- Secure payments with Stripe
+- User authentication with JWT
+- Image uploads via Cloudinary
+- Responsive UI with TailwindCSS
+- Real-time notifications
+
+---
+
+## 🚀 Deployment
+- **Frontend**: Deploy `client/dist` to Vercel/Netlify. Set `VITE_BACKEND_URL`.
+- **Backend**: Deploy `server` to Heroku/Render. Configure env vars.
+
+---
+
+## 🤝 Contributing
+1. Fork the repo.
+2. Create a branch: `git checkout -b feature/your-feature`.
+3. Commit changes: `git commit -m 'Add feature'`.
+4. Push: `git push origin feature/your-feature`.
+5. Open a pull request.
+
+---
+
+## 📈 Roadmap
+- Order tracking
+- User profiles
+- Advanced search
+- Admin dashboard
+
+---
+
+## 📝 Notes
+- Add `.env` to `.gitignore`.
+- Hash `SELLER_PASSWORD` with `bcryptjs` in production.
+- Test setup on a fresh environment.
+- Update `your-username` in the clone command.
+
+---
+
+## 📜 License
+Licensed under the ISC License. See [LICENSE](LICENSE).
+
+---
