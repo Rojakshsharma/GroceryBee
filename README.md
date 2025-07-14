@@ -1,7 +1,7 @@
 # Grocery Bee 🛒
 
 <p align="center">
-  <img src="client/public/logo.svg" alt="Grocery Bee Logo" width="150"/>
+  <img src="client/public/logo.svg" alt="Grocery Bee Logo" width="150" style="border-radius: 75px" />
 </p>
 
 Grocery Bee is a full-stack e-commerce web app for an online grocery store, built with the **MERN stack**. Users can browse, search, and buy groceries through a responsive interface.
