@@ -27,7 +27,7 @@ const Navbar = () => {
   }, [searchQuery]);
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all z-50">
+    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-[#E30047] bg-white relative transition-all z-50">
       <NavLink to={"/"} onClick={() => setOpen(false)}>
         <img
           className="h-16 w-auto rounded-full object-contain"
@@ -40,12 +40,12 @@ const Navbar = () => {
       <div className="hidden sm:flex items-center gap-8">
         <NavLink to={"/"}>Home</NavLink>
         <NavLink to={"/products"}>All Products</NavLink>
-        <NavLink to={"/contact"}>Contact</NavLink>
+        {/* <NavLink to={"/contact"}>Contact</NavLink> */}
 
-        <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
+        <div className="hidden lg:flex items-center text-sm gap-2 border border-[#E30047] px-3 rounded-full">
           <input
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
+            className="py-1.5 w-full bg-transparent outline-none placeholder-[#E30047]"
             type="text"
             placeholder="Search products"
           />
@@ -64,7 +64,7 @@ const Navbar = () => {
             className="w-6 opacity-80"
             alt="cart"
           />
-          <button className="absolute -top-2 -right-3 text-xs text-gray-600 bg-primary w-[18px] h-[18px] rounded-full">
+          <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">
             {getCartCount()}
           </button>
         </div>
@@ -113,7 +113,7 @@ const Navbar = () => {
             className="w-6 opacity-80"
             alt="cart"
           />
-          <button className="absolute -top-2 -right-3 text-xs text-gray-600 bg-primary w-[18px] h-[18px] rounded-full">
+          <button className="absolute -top-2 -right-3 text-xs text-[#E30047] bg-primary w-[18px] h-[18px] rounded-full">
             {getCartCount()}
           </button>
         </div>

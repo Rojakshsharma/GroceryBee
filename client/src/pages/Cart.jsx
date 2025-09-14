@@ -296,7 +296,7 @@ const Cart = () => {
             </p>
             <p className="flex justify-between">
               <span>Shipping Fee</span>
-              <span className="text-green-600">Free</span>
+              <span className="text-primary">Free</span>
             </p>
             <p className="flex justify-between">
               <span>Tax (2%)</span>
@@ -316,7 +316,7 @@ const Cart = () => {
 
           <button
             onClick={placeOrder}
-            className="w-full py-3 mt-6 cursor-pointer bg-primary text-gray-600>font-medium hover:bg-primary-dull transition"
+            className="w-full py-3 mt-6 cursor-pointer bg-primary text-white>font-medium hover:bg-primary-dull transition"
           >
             {paymentOption === "COD" ? "Place Order" : "Proceed To Checkout"}
           </button>

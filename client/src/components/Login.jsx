@@ -32,7 +32,7 @@ const Login = () => {
   return (
     <div
       onClick={() => setShowUserLogin(false)}
-      className="fixed top-0 bottom-0 left-0 right-0 z-30 flex items-center text-sm text-gray-600 bg-black/50"
+      className="fixed top-0 bottom-0 left-0 right-0 z-30 flex items-center text-sm text-gray-600 bg-[#E30047]"
     >
       <form
         onSubmit={OnSumbmitHandler}
@@ -40,7 +40,7 @@ const Login = () => {
         className="flex flex-col gap-4 m-auto items-start p-8 py-12 w-80 sm:w-[352px] rounded-lg shadow-xl border border-gray-200 bg-white"
       >
         <p className="text-2xl font-medium m-auto">
-          <span className="text-primary">User</span>{" "}
+          <span className="text-[#E30047]" >User</span>{" "}
           {state === "login" ? "Login" : "Sign Up"}
         </p>
         {state === "register" && (
@@ -50,7 +50,7 @@ const Login = () => {
               onChange={(e) => setName(e.target.value)}
               value={name}
               placeholder="type here"
-              className="border border-gray-200 rounded w-full p-2 mt-1 focus:border-primary"
+              className="border border-gray-200 rounded w-full p-2 mt-1 focus:[#E30047]"
               type="text"
               required
             />
@@ -62,7 +62,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="type here"
-            className="border border-gray-200 rounded w-full p-2 mt-1 focus:border-primary"
+            className="border border-gray-200 rounded w-full p-2 mt-1 focus:[#E30047]"
             type="email"
             required
           />
@@ -73,7 +73,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             placeholder="type here"
-            className="border border-gray-200 rounded w-full p-2 mt-1 focus:border-primary"
+            className="border border-gray-200 rounded w-full p-2 mt-1 focus:border-[#E30047]"
             type="password"
             required
           />
@@ -83,7 +83,7 @@ const Login = () => {
             Already have account?{" "}
             <span
               onClick={() => setState("login")}
-              className="text-[#FFB300] cursor-pointer"
+              className="text-[#E30047] cursor-pointer"
             >
               click here
             </span>
@@ -93,13 +93,13 @@ const Login = () => {
             Create an account?{" "}
             <span
               onClick={() => setState("register")}
-              className="text-primary/100 cursor-pointer"
+              className="text-[#E30047] cursor-pointer"
             >
               click here
             </span>
           </p>
         )}
-        <button className="bg-primary hover:bg-primary-dull transition-all text-gray-600 w-full py-2 rounded-md cursor-pointer">
+        <button className="bg-[#E30047] hover:bg-[#e93971] transition-all text-gray-600 w-full py-2 rounded-md cursor-pointer">
           {state === "register" ? "Create Account" : "Login"}
         </button>
       </form>
